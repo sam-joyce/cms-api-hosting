@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "blogposts",
+  "info": {
+    "name": "blogposts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "model": "permission",
+      "via": "blogpost",
+      "plugin": "users-permissions"
+    }
+  }
+}
